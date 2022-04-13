@@ -111,11 +111,11 @@ public class Init implements ApplicationListener<ContextRefreshedEvent> {
 			alunoRepo.save(aluno4);
 			
 			Avaliacao avaliacaoAluno1 = new Avaliacao();
-			AlunoDisciplina alunoDisicplina = new AlunoDisciplina();
-			alunoDisicplina.setAluno(aluno1); 
-			alunoDisicplina.setDisciplina(arquitetura);
+			AlunoDisciplina alunoDisciplina = new AlunoDisciplina();
+			alunoDisciplina.setAluno(aluno1); 
+			alunoDisciplina.setDisciplina(arquitetura);
 			
-			avaliacaoAluno1.setAlunoDisciplina(alunoDisicplina);
+			avaliacaoAluno1.setAlunoDisciplina(alunoDisciplina);
 			avaliacaoAluno1.setConceito("A");
 			avaliacaoService.save(avaliacaoAluno1);
 			
@@ -130,10 +130,10 @@ public class Init implements ApplicationListener<ContextRefreshedEvent> {
 			avaliacaoService.save(avaliacaoJoaoJava);
 			
 			
-//			Avaliacao aval = avaliacaoService.buscarNotaAlunoDisciplina(alunoDisciplina);
-//			System.out.println("Aluno" + aval.getAlunoDisciplina().getAluno().getNome());
-//			System.out.println("Disciplina" + aval.getAlunoDisciplina().getDisciplina().getNome());
-//			System.out.println("Avaliação" + aval.getConceito());
+			Avaliacao aval = avaliacaoService.buscarNotaAlunoDisciplina(alunoDisciplina);
+			System.out.println("Aluno" + aval.getAlunoDisciplina().getAluno().getNome());
+			System.out.println("Disciplina" + aval.getAlunoDisciplina().getDisciplina().getNome());
+			System.out.println("Avaliação" + aval.getConceito());
 			
 		
 		}
