@@ -135,7 +135,7 @@ public class Init implements ApplicationListener<ContextRefreshedEvent> {
 			System.out.println("Disciplina" + aval.getAlunoDisciplina().getDisciplina().getNome());
 			System.out.println("Avaliação" + aval.getConceito());
 			
-		
+		//teste
 		}
 		 
 	}
